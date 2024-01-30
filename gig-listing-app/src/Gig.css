@@ -7,6 +7,19 @@ body {
   font-size: 28px;
 }
 
+.favourite {
+  border-color: pink;
+}
+
 .favourited {
   color: red;
+  border-color: pink;
+} 
+
+img {
+  width: 50%;
+}
+
+.dice {
+  margin-top: 20px;
 }

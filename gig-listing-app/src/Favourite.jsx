@@ -1,23 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 
-function Favourite() {
-  const [favourite, setFavourite] = useState(false);
-
-  function handleClick(e) {
-   setFavourite(!favourite)
-   console.log(e)
-  }
-
-  function handleChange(e) {
-    console.log(e.target.value)
-  }
+function Favourite(props) {
+  const { isFavourite, onToggle } = props;
 
   return (
     <div>
-      <button className={favourite ? 'favourited' : ''} onClick={handleClick}>{favourite ? 'favourited' : "favourite"}</button>
-      <input onChange={handleChange} />
+      <button
+        className={isFavourite ? "favourited" : "favourite"}
+        onClick={onToggle}
+      >
+        {isFavourite ? "favourited" : "favourite"}
+      </button>
     </div>
-  )
+  );
 }
 
 export default Favourite;
