@@ -1,7 +1,12 @@
 body {
   background-color: #f9f8f6;
+  color: #323232;
 }
 
 .artist-name {
   font-size: 28px;
+}
+
+.favourited {
+  color: red;
 }
