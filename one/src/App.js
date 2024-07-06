@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -10,27 +10,26 @@ export default function App() {
     const res = await fetch("https://api.adviceslip.com/advice");
     const data = await res.json();
     setAdvice(data.slip.advice);
-    setCount(c => c + 1);
+    setCount((c) => c + 1);
   }
 
-  useEffect(function() {
-    getAdvice()
-  }, [])
+  useEffect(function () {
+    getAdvice();
+  }, []);
 
   return (
     <div className="App">
-     <h1>{advice}</h1>
-     <button onClick={getAdvice}>get advice</button>
-     <Message count={count} />
-        
+      <h1>{advice}</h1>
+      <button onClick={getAdvice}>get advice</button>
+      <Message count={count} />
     </div>
   );
 }
 
 function Message(props) {
   return (
-    <p>You have read <strong>{props.count}</strong>pieces of advice</p>
+    <p>
+      You have read <strong>{props.count}</strong>pieces of advice
+    </p>
   );
 }
-
-
