@@ -11,6 +11,8 @@ function TipCalculator() {
   const [percentageOne, setPercentageOne] = useState(0);
   const [percentageTwo, setPercentageTwo] = useState(0);
 
+  const tipTotal = Number(bill) * ((percentageOne + percentageTwo) / 2 / 100);
+
   function handleReset() {
     setBill("");
     setPercentageOne(0)
@@ -22,7 +24,7 @@ function TipCalculator() {
       <BillInput bill={bill} onSetBill={setBill}/>
       <ServiceAmount percentage={percentageOne} onSelect={setPercentageOne}><label>How did you like the service?</label></ServiceAmount>
       <ServiceAmount percentage={percentageTwo} onSelect={setPercentageTwo}><label>How did your friend like the service?</label></ServiceAmount>
-      {bill > 0 && <><TotalAmount bill={bill} percentageOne={percentageOne} percentageTwo={percentageTwo}/>
+      {bill > 0 && <><TotalAmount tipTotal={tipTotal} bill={bill}/>
       <Reset onReset={handleReset}/></>}
     </div>
  )
@@ -50,12 +52,8 @@ function ServiceAmount( { percentage, onSelect, children} ) {
   );
 }
 
-function TotalAmount( {bill, percentageOne, percentageTwo} ) {
-  let averagePercentage = (percentageOne + percentageTwo) / 2;
-  let tipTotal = ((averagePercentage / 100) * bill);
-
-  console.log(averagePercentage)
-
+function TotalAmount( {bill, tipTotal} ) {
+  console.log(tipTotal)
   return(
     <div>You pay ${bill + tipTotal} (${bill} + ${tipTotal})</div>
   )
