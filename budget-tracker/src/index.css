@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.body-wrapper {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.budget-wrapper {
+  display: flex;
+  width: 80vw;
+  justify-content: center;
+}
+
+.budget-wrapper .bills, .budget-wrapper .expenses, .budget-wrapper .savings {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.budget-wrapper .bills {
+  background-color: pink;
+}
+
+.budget-wrapper .expenses {
+  background-color: lightseagreen;
+}
+
+.budget-wrapper .savings {
+  background-color: lightskyblue;
+}
+
+.budget-wrapper .bills ul, .budget-wrapper .expenses ul, .budget-wrapper .savings ul {
+  margin: 0;
+  padding: 10px;
+  min-width: 200px;
+}
+
+.budget-wrapper li {
+  text-transform: uppercase;
+  display: flex;
+    justify-content: space-between;
+}
+
+.item-name {
+  width: 40%;
+}
+
+.budget-message {
+  font-size: 12px;
+  padding-left: 5px;
+  color: black;
+}
+
+.total-budget, .total-remaining {
+  border: 2px solid lightcoral;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    margin: 0 8px;
+    width: 250px;
+}
+
+.total-budget-wrapper {
+  display: flex;
+  width: 80vw;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.total-budget-amount, .total-remaining-amount {
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.budget-input {
+  margin: 20px;
+}
+
+input, select {
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.category-title {
+  font-weight: 700;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.category-total {
+  font-size: 18px;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.delete-item {
+  cursor: pointer;
+}
+
+.delete-item:hover {
+  color: palegoldenrod;
+}
