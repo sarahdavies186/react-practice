@@ -76,7 +76,7 @@ function BudgetForm({ totalBudget, onSetTotalBudget, onAddItem }) {
         <span className="budget-message">{totalBudget === "" ? "" : totalBudget > 0 && totalBudget < 2001 ? "Wow, that's going to be a struggle" : totalBudget > 2000 ? "You might survive the month" : ""}</span>
       </div>
       <form onSubmit={handleSubmit}>
-        <label>Add budget items</label>
+        <label>What are your planned outgoings?</label>
         <input type="text" placeholder="Add budget item" value={item} onChange={(e) => setItem(e.target.value)}></input>
         <input type="number" placeholder="Add budget cost" value={cost} onChange={(e) => setCost(e.target.value)}></input>
         <select value={category} onChange={(e) => setCategory(e.target.value)}>
