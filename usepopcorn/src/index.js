@@ -8,20 +8,26 @@ import StarRating from './StarRating';
 function Test() {
   const [movieRating, setMovieRating] = useState(0);
 
-  return(
+  return (
     <div>
-      <StarRating maxRating={5} defaultRating={3} onSetRating={setMovieRating}/>
+      <h1>Movie Review</h1>
+      
+      <StarRating maxRating={5} messages={["Terrible", "Bad", "Okay", "Good", "Amazing"]} defaultRating={3} onSetRating={setMovieRating} />
+
+      <StarRating maxRating={5} onSetRating={setMovieRating} />
+
       <p>This movie was rated {movieRating} stars</p>
+      
     </div>
-  )
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <StarRating maxRating={5} messages={["Terrible", "Bad", "Okay", "Good", "Amazing"]} defaultRating={3}/>
-    <Test />
+    
+    <Test/>
   </React.StrictMode>
 );
 
